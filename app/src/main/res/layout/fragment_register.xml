@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_container"
+    android:orientation="vertical"
+    android:padding="16dp"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/logo"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:src="@drawable/logo"
+        />
+
+    <LinearLayout
+        android:id="@+id/text"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crea un account"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:fontFamily="@font/textablack" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/textabold"
+            android:text="Registrati ora e trasforma il modo in cui ti prendi cura di te stesso!"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <EditText
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:layout_marginTop="30dp"
+        android:id="@+id/email"
+        android:hint="Email"
+        android:fontFamily="@font/textabold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:id="@+id/password"
+        android:hint="Password"
+        android:fontFamily="@font/textabold"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:id="@+id/passwordconfirm"
+        android:hint="Conferma Password"
+        android:fontFamily="@font/textabold"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <CheckBox
+        android:id="@+id/checkbox"
+        app:layout_constraintTop_toBottomOf="@id/passwordconfirm"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        app:layout_constraintStart_toEndOf="@id/checkbox"
+        app:layout_constraintTop_toBottomOf="@id/passwordconfirm"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/textabold"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accetto Termini e Condizioni"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/crea"
+        app:layout_constraintTop_toBottomOf="@id/checkbox"
+        android:layout_marginTop="30dp"
+        android:paddingVertical="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crea account"
+        android:fontFamily="@font/textabold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/drawable_button"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/oppure"
+        app:layout_constraintTop_toBottomOf="@id/crea"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/lineLeft"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            app:layout_constraintBottom_toBottomOf="@id/tvOr"
+            app:layout_constraintEnd_toStartOf="@id/tvOr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvOr" />
+
+        <TextView
+            android:id="@+id/tvOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="oppure"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/lineRight"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            app:layout_constraintBottom_toBottomOf="@id/tvOr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvOr"
+            app:layout_constraintTop_toTopOf="@id/tvOr" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registrati"
+        app:layout_constraintTop_toBottomOf="@id/oppure"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accedi"
+        android:fontFamily="@font/textabold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/drawable_button_secondary"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
