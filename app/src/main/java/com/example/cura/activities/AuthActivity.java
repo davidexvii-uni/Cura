@@ -38,17 +38,16 @@ public class AuthActivity extends AppCompatActivity {
         }
     }
 
-    // Metodo pubblico richiamabile dai frammenti per cambiare schermata
     public void replaceFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, fragment)
-                .addToBackStack(null) // Permette di tornare indietro con il tasto fisico 'Back'
+                .addToBackStack(null)
                 .commit();
     }
 
     public void vaiAllaMain() {
         Intent intent = new Intent(AuthActivity.this, MainActivity.class);
         startActivity(intent);
-        finish(); // Chiude l'AuthActivity per non far tornare l'utente indietro al login
+        finish();
     }
 }
