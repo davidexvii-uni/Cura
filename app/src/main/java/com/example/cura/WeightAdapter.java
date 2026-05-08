@@ -1,6 +1,8 @@
 package com.example.cura;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -40,11 +42,13 @@ public class WeightAdapter extends RecyclerView.Adapter<WeightAdapter.ViewHolder
         holder.textView.setText(String.valueOf(value));
 
         if(position == selectedPosition) {
-            holder.textView.setTextSize(70);
-            holder.textView.setTextColor(Color.parseColor("#1C4475"));
+            holder.textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 58);
+            holder.textView.setTextColor(Color.parseColor("#0A8EFF"));
+            holder.textView.setTypeface(null, Typeface.BOLD); // Opzionale: lo rende più visibile
         } else {
-            holder.textView.setTextSize(50);
+            holder.textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 40);
             holder.textView.setTextColor(Color.GRAY);
+            holder.textView.setTypeface(null, Typeface.NORMAL);
         }
     }
 

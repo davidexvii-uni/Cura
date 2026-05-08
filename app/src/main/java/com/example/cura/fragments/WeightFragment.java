@@ -77,7 +77,6 @@ public class WeightFragment extends Fragment {
                         int pos = layoutManager.getPosition(centerView);
                         selectedWeight = weightList.get(pos);
                         adapter.setSelectedPosition(pos);
-                        android.util.Log.d("DEBUG_SCROLL", "Peso aggiornato a: " + selectedWeight);
                     }
                 }
             }
