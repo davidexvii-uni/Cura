@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -19,6 +20,7 @@ public class GenderFragment extends Fragment {
 
     private View maleLayout, femaleLayout;
     private Button nextBtn;
+    private ImageButton backBtn;
 
     public GenderFragment() {
         super(R.layout.fragment_gender);
@@ -30,6 +32,7 @@ public class GenderFragment extends Fragment {
         maleLayout = view.findViewById(R.id.layoutMale);
         femaleLayout = view.findViewById(R.id.layoutFemale);
         nextBtn = view.findViewById(R.id.btnContinue);
+        backBtn = view.findViewById(R.id.btnBack);
 
         maleLayout.setOnClickListener(v -> selectGender("male"));
         femaleLayout.setOnClickListener(v -> selectGender("female"));
@@ -41,6 +44,10 @@ public class GenderFragment extends Fragment {
             activity.getProfile().gender = selectedGender;
 
             activity.loadFragment(new WeightFragment());
+        });
+
+        backBtn.setOnClickListener(v -> {
+            requireActivity().getOnBackPressedDispatcher().onBackPressed();
         });
     }
 

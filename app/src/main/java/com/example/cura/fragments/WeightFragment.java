@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,6 +36,7 @@ public class WeightFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.weightRecycler);
         Button nextBtn = view.findViewById(R.id.btnContinue);
+        ImageButton backBtn = view.findViewById(R.id.btnBack);;
 
         weightList = new ArrayList<>();
         for (int i = 30; i <= 150; i++) {
@@ -91,6 +93,7 @@ public class WeightFragment extends Fragment {
                 }
             }
         });
+
         nextBtn.setOnClickListener(v -> {
             if (selectedWeight == null) return;
 
@@ -98,6 +101,10 @@ public class WeightFragment extends Fragment {
             activity.getProfile().peso = Double.valueOf(selectedWeight);
 
             activity.loadFragment(new HeightFragment());
+        });
+
+        backBtn.setOnClickListener(v -> {
+            requireActivity().getOnBackPressedDispatcher().onBackPressed();
         });
 
         return view;
