@@ -18,6 +18,7 @@ public class StartQFragment extends Fragment {
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        nextBtn = view.findViewById(R.id.btnContinue);
         nextBtn.setOnClickListener(view1 -> {
             QuestionarioActivity activity = (QuestionarioActivity) requireActivity();
             activity.loadFragment(new GenderFragment());

@@ -29,6 +29,9 @@
         <activity
             android:name=".activities.MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.QuestionarioActivity"
+            android:exported="false" />
 
     </application>
 

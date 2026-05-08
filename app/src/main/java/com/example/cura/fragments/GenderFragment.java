@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.cura.R;
+import com.example.cura.fragments.WeightFragment;
 import com.example.cura.activities.QuestionarioActivity;
 
 public class GenderFragment extends Fragment {
@@ -55,7 +56,6 @@ public class GenderFragment extends Fragment {
             femaleLayout.setSelected(true);
         }
 
-        // abilita continua
         nextBtn.setEnabled(true);
     }
 }

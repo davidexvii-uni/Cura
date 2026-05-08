@@ -19,7 +19,6 @@ public class QuestionarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionario);
 
-        // primo step
         loadFragment(new StartQFragment());
     }
 

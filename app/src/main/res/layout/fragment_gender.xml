@@ -61,9 +61,8 @@
         android:layout_marginTop="40dp"
         android:text="Seleziona il tuo genere"
         android:fontFamily="@font/textablack"
-        android:textColor="#1A4375"
+        android:textColor="@color/secondary_blue_cura"
         android:textSize="32sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headerBackground" />
@@ -88,7 +87,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/ic_male"
-            app:tint="#9E9E9E" />
+            app:tint="@color/color_icon_gender" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -100,7 +99,7 @@
             android:fontFamily="@font/textablack"
             android:layout_marginTop="8dp"
             android:textSize="20dp"
-            android:textColor="#9E9E9E"
+            android:textColor="@color/color_icon_gender"
             android:textStyle="bold" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -147,7 +146,7 @@
         android:layout_height="56dp"
         android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/blue_cura"
+        android:background="@drawable/drawable_button"
         android:text="Continua"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
